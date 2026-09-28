@@ -1,0 +1,317 @@
++ GITHUB_USER=siddu-k
++ echo GITHUB_USER=siddu-k
+GITHUB_USER=siddu-k
++ run docker --version
++ echo -e '\n===== docker --version ====='
+
+===== docker --version =====
++ docker --version
+scripts/01-run-activity1.sh: line 10: docker: command not found
++ run kubectl version --client
++ echo -e '\n===== kubectl version --client ====='
+
+===== kubectl version --client =====
++ kubectl version --client
+Client Version: v1.37.1
+Kustomize Version: v5.8.1
++ run kind --version
++ echo -e '\n===== kind --version ====='
+
+===== kind --version =====
++ kind --version
+kind version 0.34.0-alpha+b99000f774d948
++ run helm version
++ echo -e '\n===== helm version ====='
+
+===== helm version =====
++ helm version
+version.BuildInfo{Version:"v3.22.0", GitCommit:"144ca65f8501953fa8b41cd1d37c7223051c85b7", GitTreeState:"clean", GoVersion:"go1.26.8"}
++ run kind create cluster --name gitops-cluster
++ echo -e '\n===== kind create cluster --name gitops-cluster ====='
+
+===== kind create cluster --name gitops-cluster =====
++ kind create cluster --name gitops-cluster
+ERROR: failed to create cluster: failed to get docker info: command "docker info --format '{{json .}}'" failed with error: exec: "docker": executable file not found in $PATH
+
+Command Output: 
++ run kubectl cluster-info
++ echo -e '\n===== kubectl cluster-info ====='
+
+===== kubectl cluster-info =====
++ kubectl cluster-info
+E0928 16:34:14.179726    4151 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.180363    4151 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.182993    4151 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.183560    4151 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.185053    4151 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+
+To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get nodes
++ echo -e '\n===== kubectl get nodes ====='
+
+===== kubectl get nodes =====
++ kubectl get nodes
+E0928 16:34:14.363918    4160 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.364662    4160 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.368119    4160 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.368718    4160 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.370437    4160 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl create namespace argocd
++ echo -e '\n===== kubectl create namespace argocd ====='
+
+===== kubectl create namespace argocd =====
++ kubectl create namespace argocd
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get namespaces
++ echo -e '\n===== kubectl get namespaces ====='
+
+===== kubectl get namespaces =====
++ kubectl get namespaces
+E0928 16:34:14.730430    4180 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.730962    4180 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.733653    4180 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.734221    4180 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:14.735799    4180 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
++ echo -e '\n===== kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml ====='
+
+===== kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml =====
++ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+error: error validating "https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml": error validating data: failed to download openapi: Get "http://localhost:8080/openapi/v2?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
++ run kubectl get pods -n argocd
++ echo -e '\n===== kubectl get pods -n argocd ====='
+
+===== kubectl get pods -n argocd =====
++ kubectl get pods -n argocd
+E0928 16:34:15.665190    4199 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.665884    4199 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.668143    4199 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.669246    4199 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.671359    4199 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ echo 'WAIT 2-3 min, re-run: kubectl get pods -n argocd until Running'
+WAIT 2-3 min, re-run: kubectl get pods -n argocd until Running
++ run kubectl -n argocd get secret argocd-initial-admin-secret -o 'jsonpath={.data.password}'
++ echo -e '\n===== kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath={.data.password} ====='
+
+===== kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath={.data.password} =====
++ kubectl -n argocd get secret argocd-initial-admin-secret -o 'jsonpath={.data.password}'
+E0928 16:34:15.841225    4208 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.841777    4208 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.844503    4208 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.844891    4208 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:15.846313    4208 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ echo ''
+
++ echo 'UI: kubectl port-forward svc/argocd-server -n argocd 8080:443  # keep running, open https://localhost:8080 admin/<password above>'
+UI: kubectl port-forward svc/argocd-server -n argocd 8080:443  # keep running, open https://localhost:8080 admin/<password above>
++ echo 'SCREENSHOT: ArgoCD login + dashboard'
+SCREENSHOT: ArgoCD login + dashboard
++ run git status
++ echo -e '\n===== git status ====='
+
+===== git status =====
++ git status
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
++ run git log --oneline -5
++ echo -e '\n===== git log --oneline -5 ====='
+
+===== git log --oneline -5 =====
++ git log --oneline -5
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
++ run ls -R dev
++ echo -e '\n===== ls -R dev ====='
+
+===== ls -R dev =====
++ ls -R dev
+dev:
+task-tracker
+
+dev/task-tracker:
+deployment.yaml
+namespace.yaml
+service.yaml
++ run cat dev/task-tracker/namespace.yaml
++ echo -e '\n===== cat dev/task-tracker/namespace.yaml ====='
+
+===== cat dev/task-tracker/namespace.yaml =====
++ cat dev/task-tracker/namespace.yaml
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
++ run cat dev/task-tracker/deployment.yaml
++ echo -e '\n===== cat dev/task-tracker/deployment.yaml ====='
+
+===== cat dev/task-tracker/deployment.yaml =====
++ cat dev/task-tracker/deployment.yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: task-tracker
+  namespace: dev
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: task-tracker
+  template:
+    metadata:
+      labels:
+        app: task-tracker
+    spec:
+      containers:
+        - name: task-tracker
+          image: nginx:1.27
+          ports:
+            - containerPort: 80
++ run cat dev/task-tracker/service.yaml
++ echo -e '\n===== cat dev/task-tracker/service.yaml ====='
+
+===== cat dev/task-tracker/service.yaml =====
++ cat dev/task-tracker/service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: task-tracker
+  namespace: dev
+spec:
+  selector:
+    app: task-tracker
+  ports:
+    - port: 80
+      targetPort: 80
+  type: ClusterIP
++ echo 'Push: git add . && git commit -m '\''Add task tracker'\'' && git push origin main'
+Push: git add . && git commit -m 'Add task tracker' && git push origin main
++ echo 'SCREENSHOT: GitHub repo files + ArgoCD Settings>Repositories Connected'
+SCREENSHOT: GitHub repo files + ArgoCD Settings>Repositories Connected
++ sed -i 's|<your-username>|siddu-k|g' task-tracker-app.yaml
++ run cat task-tracker-app.yaml
++ echo -e '\n===== cat task-tracker-app.yaml ====='
+
+===== cat task-tracker-app.yaml =====
++ cat task-tracker-app.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: task-tracker-dev
+  namespace: argocd
+spec:
+  project: default
+  source:
+    # TODO: replace siddu-k with your GitHub username
+    repoURL: https://github.com/siddu-k/gitops-infra.git
+    targetRevision: main
+    path: dev/task-tracker
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: dev
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
++ run kubectl apply -f task-tracker-app.yaml
++ echo -e '\n===== kubectl apply -f task-tracker-app.yaml ====='
+
+===== kubectl apply -f task-tracker-app.yaml =====
++ kubectl apply -f task-tracker-app.yaml
+error: error validating "task-tracker-app.yaml": error validating data: failed to download openapi: Get "http://localhost:8080/openapi/v2?timeout=32s": dial tcp 127.0.0.1:8080: connect: connection refused; if you choose to ignore these errors, turn validation off with --validate=false
++ run kubectl get applications -n argocd
++ echo -e '\n===== kubectl get applications -n argocd ====='
+
+===== kubectl get applications -n argocd =====
++ kubectl get applications -n argocd
+E0928 16:34:16.323014    4234 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.323651    4234 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.325635    4234 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.326180    4234 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.327829    4234 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get pods -n dev
++ echo -e '\n===== kubectl get pods -n dev ====='
+
+===== kubectl get pods -n dev =====
++ kubectl get pods -n dev
+E0928 16:34:16.500596    4243 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.501186    4243 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.504314    4243 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.505327    4243 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.505809    4243 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get deployment -n dev
++ echo -e '\n===== kubectl get deployment -n dev ====='
+
+===== kubectl get deployment -n dev =====
++ kubectl get deployment -n dev
+E0928 16:34:16.675820    4253 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.676391    4253 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.678114    4253 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.679174    4253 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.680067    4253 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get service -n dev
++ echo -e '\n===== kubectl get service -n dev ====='
+
+===== kubectl get service -n dev =====
++ kubectl get service -n dev
+E0928 16:34:16.856651    4262 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.857238    4262 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.858810    4262 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.860587    4262 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:16.861044    4262 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ echo 'SCREENSHOT: ArgoCD Healthy/Synced'
+SCREENSHOT: ArgoCD Healthy/Synced
++ echo 'DO: change dev/task-tracker/deployment.yaml replicas: 2 -> 3, then git add/commit/push'
+DO: change dev/task-tracker/deployment.yaml replicas: 2 -> 3, then git add/commit/push
++ echo 'THEN: kubectl get pods -n dev  (expect 3, no kubectl deploy)'
+THEN: kubectl get pods -n dev  (expect 3, no kubectl deploy)
++ echo 'SCREENSHOT: git commit + 3 pods'
+SCREENSHOT: git commit + 3 pods
++ run kubectl scale deployment task-tracker --replicas=1 -n dev
++ echo -e '\n===== kubectl scale deployment task-tracker --replicas=1 -n dev ====='
+
+===== kubectl scale deployment task-tracker --replicas=1 -n dev =====
++ kubectl scale deployment task-tracker --replicas=1 -n dev
+E0928 16:34:17.023313    4271 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.024148    4271 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.025824    4271 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.026806    4271 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.028327    4271 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ run kubectl get deployment task-tracker -n dev
++ echo -e '\n===== kubectl get deployment task-tracker -n dev ====='
+
+===== kubectl get deployment task-tracker -n dev =====
++ kubectl get deployment task-tracker -n dev
+E0928 16:34:17.198920    4280 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.199563    4280 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.201211    4280 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.202761    4280 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.203217    4280 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ echo 'WAIT ~1-3 min for ArgoCD selfHeal, then:'
+WAIT ~1-3 min for ArgoCD selfHeal, then:
++ run kubectl get deployment task-tracker -n dev
++ echo -e '\n===== kubectl get deployment task-tracker -n dev ====='
+
+===== kubectl get deployment task-tracker -n dev =====
++ kubectl get deployment task-tracker -n dev
+E0928 16:34:17.375304    4289 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.375968    4289 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.378970    4289 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.379814    4289 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+E0928 16:34:17.381377    4289 memcache.go:381] "Couldn't get current server API group list" err="Get \"http://localhost:8080/api?timeout=32s\": dial tcp 127.0.0.1:8080: connect: connection refused"
+The connection to the server localhost:8080 was refused - did you specify the right host or port?
++ echo 'SCREENSHOT: back to 3 replicas'
+SCREENSHOT: back to 3 replicas
++ set +x

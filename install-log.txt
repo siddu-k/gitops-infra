@@ -1,0 +1,25 @@
+=== docker check (needs Docker Desktop + WSL integration) ===
+scripts/00-install-tools-wsl.sh: line 6: docker: command not found
+MISSING: Install Docker Desktop on Windows, enable WSL integration for Ubuntu
+=== kubectl ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0  9 59.01M   9  5.77M   0      0  5.75M      0   00:10   00:01   00:09  5.75M 23 59.01M  23 13.68M   0      0  6.83M      0   00:08   00:02   00:06  6.83M 34 59.01M  34 20.17M   0      0  6.68M      0   00:08   00:03   00:05  6.69M 39 59.01M  39 23.07M   0      0  5.74M      0   00:10   00:04   00:06  5.74M 42 59.01M  42 24.91M   0      0  4.96M      0   00:11   00:05   00:06  4.96M 45 59.01M  45 26.82M   0      0  4.44M      0   00:13   00:06   00:07  4.18M 47 59.01M  47 28.27M   0      0  4.02M      0   00:14   00:07   00:07  2.90M 49 59.01M  49 29.35M   0      0  3.65M      0   00:16   00:08   00:08  1.82M 52 59.01M  52 30.73M   0      0  3.40M      0   00:17   00:09   00:08  1.52M 54 59.01M  54 32.41M   0      0  3.23M      0   00:18   00:10   00:08  1.49M 57 59.01M  57 33.88M   0      0  3.07M      0   00:19   00:11   00:08  1.41M 60 59.01M  60 35.59M   0      0  2.95M      0   00:19   00:12   00:07  1.46M 63 59.01M  63 37.49M   0      0  2.87M      0   00:20   00:13   00:07  1.62M 66 59.01M  66 39.39M   0      0  2.80M      0   00:21   00:14   00:07  1.73M 69 59.01M  69 40.79M   0      0  2.71M      0   00:21   00:15   00:06  1.67M 71 59.01M  71 41.92M   0      0  2.61M      0   00:22   00:16   00:06  1.60M 73 59.01M  73 43.19M   0      0  2.53M      0   00:23   00:17   00:06  1.52M 75 59.01M  75 44.78M   0      0  2.48M      0   00:23   00:18   00:05  1.45M 78 59.01M  78 46.26M   0      0  2.42M      0   00:24   00:19   00:05  1.36M 81 59.01M  81 47.93M   0      0  2.39M      0   00:24   00:20   00:04  1.42M 84 59.01M  84 49.77M   0      0  2.36M      0   00:24   00:21   00:03  1.56M 86 59.01M  86 51.33M   0      0  2.32M      0   00:25   00:22   00:03  1.62M 90 59.01M  90 53.20M   0      0  2.30M      0   00:25   00:23   00:02  1.68M 93 59.01M  93 55.21M   0      0  2.29M      0   00:25   00:24   00:01  1.78M 97 59.01M  97 57.47M   0      0  2.29M      0   00:25   00:25          1.90M 99 59.01M  99 58.92M   0      0  2.26M      0   00:26   00:26          1.82M100 59.01M 100 59.01M   0      0  2.25M      0   00:26   00:26          1.82M100 59.01M 100 59.01M   0      0  2.25M      0   00:26   00:26          1.82M100 59.01M 100 59.01M   0      0  2.25M      0   00:26   00:26          1.82M
+Client Version: v1.37.1
+Kustomize Version: v5.8.1
+=== kind ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100     86 100     86   0      0    236      0                              0100     86 100     86   0      0    236      0                              0
+  0      0   0      0   0      0      0      0                              0  0 10.04M   0 99.66k   0      0  74375      0   02:21   00:01   02:20 98.87k 18 10.04M  18  1.84M   0      0 791.2k      0   00:12   00:02   00:10 933.9k100 10.04M 100 10.04M   0      0  3.05M      0   00:03   00:03         933.9k100 10.04M 100 10.04M   0      0  3.05M      0   00:03   00:03         933.9k100 10.04M 100 10.04M   0      0  3.05M      0   00:03   00:03         933.9k
+kind version 0.34.0-alpha+b99000f774d948
+=== helm ===
+  % Total    % Received % Xferd  Average Speed  Time    Time    Time   Current
+                                 Dload  Upload  Total   Spent   Left   Speed
+  0      0   0      0   0      0      0      0                              0100  12252 100  12252   0      0  61722      0                              0100  12252 100  12252   0      0  61676      0                              0100  12252 100  12252   0      0  61648      0                              0
+Downloading https://get.helm.sh/helm-v3.22.0-linux-amd64.tar.gz
+Verifying checksum... Done.
+Preparing to install helm into /usr/local/bin
+helm installed into /usr/local/bin/helm
+version.BuildInfo{Version:"v3.22.0", GitCommit:"144ca65f8501953fa8b41cd1d37c7223051c85b7", GitTreeState:"clean", GoVersion:"go1.26.8"}
+DONE
