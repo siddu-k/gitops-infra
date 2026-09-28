@@ -4,7 +4,7 @@ metadata:
   name: task-tracker
   namespace: dev
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: task-tracker
