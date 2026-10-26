@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: task-tracker
-          image: nginx:1.27
+          image: nginx:1.28
           ports:
             - containerPort: 80
