@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: gitops-project
+  namespace: argocd
+spec:
+  description: GitOps project for task tracker applications
+
+  sourceRepos:
+    - https://github.com/siddu-k/gitops-infra.git
+
+  # destinations restricted to the three environments only
+  destinations:
+    - namespace: dev
+      server: https://kubernetes.default.svc
+    - namespace: staging
+      server: https://kubernetes.default.svc
+    - namespace: prod
+      server: https://kubernetes.default.svc
